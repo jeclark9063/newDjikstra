@@ -75,6 +75,7 @@ void Graph::dijkstra(Graph* graph, int src)
 			if (minHeap.isInMinHeap(&minHeap, v) && dist[u] != INT_MAX &&
 				pCrawl->weight + dist[u] < dist[v])
 			{
+				//added
 				dist[v] = dist[u] + pCrawl->weight;
 				//set city that changed it
 				path[v] = u;
